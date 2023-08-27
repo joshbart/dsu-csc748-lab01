@@ -27,5 +27,4 @@ if __name__ == "__main__":
     base_address_as_dec = int(base_address_as_hex, 16)
     win_address_as_dec = base_address_as_dec + 5130
 
-
     print("I am a breakpoint placeholder to help with debugging")
