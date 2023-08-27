@@ -17,3 +17,6 @@ if __name__ == "__main__":
 
     # I read in the base address.
     base_address_as_hex = process_to_exploit.recvuntil(b".", True)
+
+
+    print("I am a breakpoint placeholder to help with debugging")
