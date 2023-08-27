@@ -18,5 +18,9 @@ if __name__ == "__main__":
     # I read in the base address.
     base_address_as_hex = process_to_exploit.recvuntil(b".", True)
 
+    # I read the rest of the STDOUT.
+    # This is also not useful, so it is dropped as well.
+    debug_useless_info = process_to_exploit.recvlines(2)
+
 
     print("I am a breakpoint placeholder to help with debugging")
